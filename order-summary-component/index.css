@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+  margin: 0;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+/* https://stackoverflow.com/questions/2460100/remove-the-complete-styling-of-an-html-button-submit */
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  font-weight: 700;
+  font-size: .875rem;
+}
+
+body {
+  width: 100%;
+  background-image: url("./assets/pattern-background-desktop.svg");
+  background-color: hsl(225, 100%, 94%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -50vh;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+}
+
+p, span, button {
+  color: hsl(224, 23%, 55%);
+}
+
+.container {
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 450px;
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 10px rgb(0, 0, 0, .10);
+}
+
+.card-image {
+  display: flex;
+}
+
+.card-image img {
+  width: 100%;
+}
+
+.card-body {
+  margin: 48px;
+  text-align: center;
+}
+
+.card-title {
+  margin: 16px 0;
+}
+
+.card-description {
+  margin: 16px 0;
+  line-height: 1.6;
+}
+
+.card-plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(225, 100%, 98%);
+  padding: 24px;
+  border-radius: 12px;
+  margin: 32px 0;
+}
+
+.plan-body {
+  display: flex;
+  align-items: center;
+}
+
+.plan-icon {
+  display: flex;
+}
+
+.plan-details {
+  margin-left: 16px;
+  text-align: left;
+}
+
+.plan-title {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.plan-button {
+  color:hsl(245, 75%, 52%);
+  font-weight: 700;
+  font-size: .875rem;
+}
+
+.card-buttons {
+  margin: 16px 0;
+}
+
+.card-buttons button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.card-buttons button.primary {
+  background-color: hsl(245, 75%, 52%);
+  box-shadow: 0 20px 15px hsl(225, 100%, 94%);
+  color: white;
+  margin-bottom: 16px;
+}
+
+.attribution {
+  text-align: center;
+  margin: 16px;
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    background-image: url("./assets/pattern-background-mobile.svg");
+    background-position: 0 -75vh;
+  }
+
+  .card {
+    width: calc(100% - 32px);
+  }
+
+  .card-body {
+    margin: 24px;
+    text-align: center;
+  }
+
+  .card-plan {
+    padding: 16px;
+  }
+}
