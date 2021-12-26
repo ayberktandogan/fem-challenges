@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+  color: hsl(229, 23%, 23%);
+  font-weight: 400;
+}
+
+p {
+  color: hsl(215, 51%, 70%);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+/* https://stackoverflow.com/questions/2460100/remove-the-complete-styling-of-an-html-button-submit */
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  font-weight: 700;
+  font-size: .875rem;
+}
+
+body {
+  width: 100%;
+  background-color: hsl(227, 10%, 46%);
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 400px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgb(0, 0, 0, .14);
+  overflow: hidden;
+  padding-bottom: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.card-header {
+  width: 100%;
+  display: flex;
+}
+
+.card-header img {
+  width: 100%;
+}
+
+.card-avatar {
+  text-align: center;
+  margin-top: -50px;
+}
+
+.card-avatar img {
+  width: 100px;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+.card-text {
+  text-align: center;
+  margin: 16px 0;
+}
+
+.profile-name {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+
+.profile-age {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: hsl(185, 75%, 39%);
+}
+
+.profile-city {
+  margin: 8px 0;
+  color: hsl(185, 75%, 39%);
+  font-weight: 400;
+}
+
+.card-seperator {
+  height: 1px;
+  background-color: hsl(0, 0%, 59%);
+  opacity: .2;
+  margin: 24px 0;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 24px;
+}
+
+.info-block {
+  text-align: center;
+  width: 100%;
+}
+
+.info-block span {
+  font-size: .75rem;
+  letter-spacing: 2px;
+  color: hsl(185, 75%, 39%);
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.top {
+  background-image: url("./assets/bg-pattern-top.svg");
+  background-size: cover;
+  width: 1000px;
+  height: 1000px;
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  opacity: .5;
+}
+
+.bottom {
+  background-image: url("./assets/bg-pattern-bottom.svg");
+  background-size: cover;
+  width: 1000px;
+  height: 1000px;
+  position: absolute;
+  bottom: -50%;
+  right: -20%;
+  opacity: .8;
+}
+
+.attribution {
+  position: relative;
+  text-align: center;
+  margin: 16px;
+  z-index: 3;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: calc(100% - 36px);
+  }
+
+  .top {
+    background-image: url("./assets/bg-pattern-top.svg");
+    background-size: cover;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: -40%;
+    left: -85%;
+    opacity: .5;
+  }
+  
+  .bottom {
+    background-image: url("./assets/bg-pattern-bottom.svg");
+    background-size: cover;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    bottom: -40%;
+    right: -85%;
+    opacity: .5;
+  }
+}
