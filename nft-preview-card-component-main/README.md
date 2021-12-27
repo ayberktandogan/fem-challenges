@@ -1,4 +1,4 @@
-# Frontend Mentor Challenge - NFT Preview Card Component
+# Frontend Mentor Challenge - NFT Preview Card Component
 https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U
 
 solution: https://www.frontendmentor.io/solutions/html-and-css-only-fLhrkYDZM
