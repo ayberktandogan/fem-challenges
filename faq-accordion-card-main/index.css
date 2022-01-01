@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+  color: hsl(238, 29%, 16%);
+  font-weight: 400;
+}
+
+p {
+  color: hsl(240, 6%, 50%);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+ul {
+  display: block;
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+/* https://stackoverflow.com/questions/2460100/remove-the-complete-styling-of-an-html-button-submit */
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  font-weight: 700;
+  font-size: .875rem;
+}
+
+body {
+  width: 100%;
+  background: linear-gradient(45deg, hsl(273, 75%, 66%) 0%, hsl(240, 73%, 65%) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 1000px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgb(0, 0, 0, .14);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  align-items: center;
+  position: relative;
+}
+
+.card-image {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-desktop {
+  position: relative;
+  left: -80px;
+  z-index: 3;
+}
+
+.image-box {
+  position: absolute;
+  top: 50%;
+  left: -90px;
+  transform: translateY(-30%);
+  z-index: 4;
+  filter: drop-shadow(0 0 20px rgb(0, 0, 0, .2));
+}
+
+.image-mobile {
+  display: none;
+}
+
+.bg-solid {
+  position: absolute;
+  top: -285px;
+  left: -57%;
+  right: 0;
+  bottom: 0;
+}
+
+.card-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 68px 96px 68px 0;
+}
+
+.card-title {
+  margin-bottom: 24px;
+}
+
+.card-question {
+  padding: 16px 0;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+.card-question button {
+  width: 100%;
+}
+
+.card-question button:hover .question-title {
+  color: hsl(14, 88%, 65%);
+}
+
+.card-question button:focus .question-title {
+  color: hsl(238, 29%, 16%);
+}
+
+.card-question button:focus .question-title {
+  font-weight: 700;
+}
+
+.card-question button:focus .question-answer {
+  display: block;
+}
+
+.card-question button:focus .gg-chevron-down {
+  transform: rotateX(180deg)!important;
+}
+
+.question-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: .9rem;
+  font-weight: 400;
+}
+
+.question-answer {
+  display: none;
+  margin: 12px 0;
+  text-align: left;
+}
+
+.attribution {
+  position: relative;
+  text-align: center;
+  margin: 16px;
+  z-index: 3;
+}
+
+.gg-chevron-down img {
+  color: hsl(14, 88%, 65%);
+  width: 12px;
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    background: hsl(273, 75%, 66%);
+  }
+
+  .container {
+    margin: 96px 0;
+  }
+
+  .card {
+    width: calc(100% - 36px);
+  }
+
+  .image-desktop {
+    display: none;
+  }
+
+  .image-mobile {
+    display: block;
+    width: 278px;
+    position: absolute;
+    top: -128px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 3;
+  }
+
+  .bg-solid {
+    width: 278px;
+    position: absolute;
+    top: -150px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+  }
+
+  .card-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 168px 24px 64px;
+  }
+}
