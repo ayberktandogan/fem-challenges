@@ -5,4 +5,4 @@ solution:
 
 uses: HTML & CSS
 
-link: 
+link: https://ayberktandogan.github.io/fem-challenges/faq-accordion-card-main/index.html
