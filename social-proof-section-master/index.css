@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  font-family: 'Spartan', sans-serif;
+  color: hsl(300, 43%, 22%);
+  font-weight: 400;
+}
+
+p {
+  color: hsl(333, 80%, 67%);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+/* https://stackoverflow.com/questions/2460100/remove-the-complete-styling-of-an-html-button-submit */
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  font-weight: 700;
+  font-size: .875rem;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 100%);
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page-info {
+  display: flex;
+  flex: 1 1 0px;
+  align-items: center;
+  gap: 60px;
+  margin-top: 160px;
+  width: min(calc(100% - 36px), 85%);
+}
+
+.page-text {
+  width: 75%;
+}
+
+.page-title {
+  font-size: 3rem;
+}
+
+.page-description {
+  font-size: .875rem;
+  margin-top: 8px;
+}
+
+.page-ratings {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.rating-card {
+  display: flex;
+  align-items: center;
+  width: calc(70% - 48px);
+  background-color: hsl(300, 24%, 96%);
+  padding: 18px 48px;
+  border-radius: 8px;
+}
+
+.rating-card:nth-child(2) {
+  align-self: center;
+}
+
+.rating-card:nth-child(3) {
+  align-self: flex-end;
+}
+
+
+.rating-card .card-text {
+  font-weight: 700;
+  font-size: .875rem;
+  margin-left: 16px;
+}
+
+.page-comments {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 80px;
+  width: min(calc(100% - 36px), 85%);
+}
+
+.comment-card {
+  padding: 48px 40px;
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 8px;
+}
+
+.comment-card:nth-child(2) {
+  position: relative;
+  top: 16px;
+  margin-bottom: -16px;
+}
+
+.comment-card:nth-child(3) {
+  position: relative;
+  top: 32px;
+  margin-bottom: -32px;
+}
+
+.comment-card .card-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 24px;
+}
+
+.comment-card .card-owner {
+  display: flex;
+  flex-direction: column;
+  gap: 4px
+}
+
+.comment-card .card-name {
+  color: hsl(300, 24%, 96%);
+  font-size: .875rem;
+  font-weight: 500;
+}
+
+.comment-card .card-title {
+  color: hsl(303, 10%, 53%);
+  font-size: .8rem;
+}
+
+.comment-card .card-avatar {
+  width: 40px;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.comment-card .card-description {
+  font-size: 0.8rem;
+  color: hsl(300, 24%, 96%);
+}
+
+.background-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.background-container .top {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.background-container .bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.attribution {
+  position: relative;
+  text-align: center;
+  margin: 64px;
+  z-index: 3;
+}
+
+@media screen and (max-width: 800px) {
+  .page-info {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: calc(100% - 36px);
+  }
+
+  .page-text {
+    width: 100%;
+  }
+
+  .page-title {
+    margin-bottom: 36px;
+  }
+
+  .page-ratings {
+    width: 100%;
+  }
+
+  .page-comments {
+    margin-top: 72px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .rating-card {
+    flex-direction: column;
+    width: calc(80% - 48px);
+    align-self: center!important;
+  }
+
+  .rating-card .card-text {
+    margin-top: 16px;
+  }
+}
